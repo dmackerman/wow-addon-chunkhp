@@ -37,7 +37,7 @@
 
 ## Resume checkpoint
 
-- Repository: not a git repository; addon folder `AddOns/ChunkHP` (renamed from HitTrail 2026-11-10); release zip `AddOns/ChunkHP-1.5.0.zip`.
+- Repository: git, https://github.com/dmackerman/wow-addon-chunkhp, branch `main` (first commit 3e6ab4a, 2026-11-10), checked out at `AddOns/ChunkHP`. Release zip `AddOns/ChunkHP-1.5.0.zip` sits outside the repo.
 - Last completed slice: IMP-011 (rename to ChunkHP, release zip, CurseForge draft), 2026-11-10.
 - Next executable action: the user fully restarts the game and runs V-010, then V-009. The user uploads `ChunkHP-1.5.0.zip` to CurseForge (Forever flavor) using docs/CURSEFORGE.md. Possible next work: color pickers (DEC-003), translations, a GitHub repo + packager for automatic releases.
 - Open questions: whether to add color pickers (DEC-003); whether to add translations.
