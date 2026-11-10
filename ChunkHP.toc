@@ -5,6 +5,7 @@
 ## Version: 1.5.0
 ## SavedVariables: ChunkHPDB
 ## Category: Combat
+## X-Curse-Project-ID: 1797146
 
 Locales\Base.lua
 ChunkHP.lua

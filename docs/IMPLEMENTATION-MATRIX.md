@@ -41,7 +41,7 @@
 
 - Repository: git, https://github.com/dmackerman/wow-addon-chunkhp, branch `main` (first commit 3e6ab4a, 2026-11-10), checked out at `AddOns/ChunkHP`. Release zip `AddOns/ChunkHP-1.5.0.zip` sits outside the repo.
 - Last completed slice: IMP-012 (release workflow), 2026-11-10.
-- Next executable action: the user creates the CurseForge project, adds `## X-Curse-Project-ID` and the `CF_API_KEY` secret, then pushes tag `v1.5.0` (V-011). In-game: full restart, then V-010 and V-009. Possible next work: color pickers (DEC-003), translations.
+- Next executable action: CurseForge project created (https://www.curseforge.com/wow/addons/chunkhp, id 1797146 per the user, in TOC as X-Curse-Project-ID; awaiting moderation). The user adds the `CF_API_KEY` repo secret, then pushes tag `v1.5.0` (V-011). In-game: full restart, then V-010 and V-009. Possible next work: color pickers (DEC-003), translations.
 - Open questions: whether to add color pickers (DEC-003); whether to add translations.
 - Testing choice: Witchcraft in-game (user, 2026-11-10). It isn't installed, so the user chose to test by hand ("I'll test by hand", 2026-11-10). Record their reported results under V-002 to V-005.
 - Controller: overlays are passive. The options page uses stock controls, and a gamepad check is pending (V-004).

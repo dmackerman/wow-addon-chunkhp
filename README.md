@@ -2,6 +2,8 @@
 
 <img src="media/logo.svg" alt="ChunkHP logo" width="160">
 
+**Download:** [ChunkHP on CurseForge](https://www.curseforge.com/wow/addons/chunkhp)
+
 A World of Warcraft: **Forever** addon that makes damage *feel* like damage. When your target or a nameplate takes a hit, the lost health flashes, then lingers as a "ghost" chunk that drains away: the delayed health bar from fighting games, Soulslikes and JRPGs, on WoW's own frames.
 
 ## Features
@@ -15,7 +17,7 @@ A World of Warcraft: **Forever** addon that makes damage *feel* like damage. Whe
 
 ## Install
 
-Copy the `ChunkHP` folder into `World of Warcraft/_forever_/Interface/AddOns/`, then restart the game.
+Install from [CurseForge](https://www.curseforge.com/wow/addons/chunkhp) with the CurseForge app, or manually: copy the `ChunkHP` folder into `World of Warcraft/_forever_/Interface/AddOns/`, then restart the game.
 
 ## Use
 
@@ -40,7 +42,7 @@ Pushing a tag like `v1.5.1` runs [.github/workflows/release.yml](.github/workflo
 
 To also upload to CurseForge (one-time setup):
 
-1. Create the CurseForge project, then add its id (from the "About Project" box) to `ChunkHP.toc` as `## X-Curse-Project-ID: <id>`.
+1. Done: the project is [chunkhp](https://www.curseforge.com/wow/addons/chunkhp) and `ChunkHP.toc` has `## X-Curse-Project-ID: 1797146`.
 2. Create an API token at <https://legacy.curseforge.com/account/api-tokens> and add it to this repo under Settings > Secrets and variables > Actions as `CF_API_KEY`.
 
 Tags with `alpha` or `beta` in the name (e.g. `v1.6.0-beta1`) are uploaded as Alpha/Beta files.
