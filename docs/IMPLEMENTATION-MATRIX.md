@@ -18,6 +18,7 @@
 | IMP-009 | REQ-011 | Preview fix after user screenshot: name text/font/anchor, level box, live sizes | ChunkHP.lua, Locales/Base.lua | implemented | V-008 (rerun) not run |
 | IMP-010 | REQ-012 | Damage Numbers section: header, 3 CVar checkboxes, runtime-guarded size slider, restore-defaults button | ChunkHP.lua, Locales/Base.lua | implemented | V-009 not run |
 | IMP-011 | REQ-013 | Rename to ChunkHP (code, files, folder, settings migration) + release zip + CurseForge listing draft | all files, docs/CURSEFORGE.md, ../ChunkHP-1.5.0.zip | implemented | V-010 not run |
+| IMP-012 | REQ-013 | Tag-driven release workflow (.github/workflows/release.yml), release steps in the README | .github/workflows/release.yml, README.md | implemented | V-011 not run |
 | IMP-005 | REQ-007 | English catalog, loaded first in TOC | Locales/Base.lua, ChunkHP.toc | implemented | V-001 key check pass |
 
 ## Validation evidence
@@ -33,13 +34,14 @@
 | V-008 | in-game / visual | Put the ChunkHP preview next to Esc > Options > Nameplates' own preview (screenshots). Expect the same framed box and "Preview" label, the same bar art, height and width, and the name above the bar. Change Nameplate Style (Thin, Modern, Block) and Size, reopen the ChunkHP page, and the preview matches each. The flash and trail still show past the fill, and the buttons sit below the box without overlapping. | Rerun after IMP-009: not run. First run, 2026-11-10 (user screenshot): fail. The name read "Target Name" and was small and left-aligned, there was no level box, and the bar was thinner than the real plate; fixed in IMP-009, needs a rerun. |
 | V-009 | in-game | The ChunkHP page shows a "Damage Numbers" header with 3 checkboxes. Untick "Show damage on targets", then hit a mob: no numbers appear, and Blizzard's Combat > floating combat text menu shows Damage off too. If a "Number size" slider appears, 2.0x makes the numbers clearly bigger. Restore defaults turns everything back on with size 1.0, and nothing is lost after `/reload`. Record whether the size slider appeared. | not run |
 | V-010 | in-game | Fully exit and restart the game (not `/reload`). The AddOns list shows ChunkHP and not HitTrail. Options > AddOns shows "ChunkHP", the Style still says Classic MMO, and `/chunkhp` and `/hittrail` both print help. No Lua errors. | not run |
+| V-011 | CI | Push a `v*` tag. The Release workflow succeeds, the GitHub release holds `ChunkHP-<tag>.zip` with only the `ChunkHP/` game files (no docs, README or dotfiles), and after CurseForge setup the file appears on CurseForge under Forever 1.60.1. | not run |
 | V-005 | in-game | Look at the frame art: the overlay must not draw over the target-frame border or nameplate border. | pass, informal (user: "looks good", 2026-11-10; items not confirmed one by one) |
 
 ## Resume checkpoint
 
 - Repository: git, https://github.com/dmackerman/wow-addon-chunkhp, branch `main` (first commit 3e6ab4a, 2026-11-10), checked out at `AddOns/ChunkHP`. Release zip `AddOns/ChunkHP-1.5.0.zip` sits outside the repo.
-- Last completed slice: IMP-011 (rename to ChunkHP, release zip, CurseForge draft), 2026-11-10.
-- Next executable action: the user fully restarts the game and runs V-010, then V-009. The user uploads `ChunkHP-1.5.0.zip` to CurseForge (Forever flavor) using docs/CURSEFORGE.md. Possible next work: color pickers (DEC-003), translations, a GitHub repo + packager for automatic releases.
+- Last completed slice: IMP-012 (release workflow), 2026-11-10.
+- Next executable action: the user creates the CurseForge project, adds `## X-Curse-Project-ID` and the `CF_API_KEY` secret, then pushes tag `v1.5.0` (V-011). In-game: full restart, then V-010 and V-009. Possible next work: color pickers (DEC-003), translations.
 - Open questions: whether to add color pickers (DEC-003); whether to add translations.
 - Testing choice: Witchcraft in-game (user, 2026-11-10). It isn't installed, so the user chose to test by hand ("I'll test by hand", 2026-11-10). Record their reported results under V-002 to V-005.
 - Controller: overlays are passive. The options page uses stock controls, and a gamepad check is pending (V-004).

@@ -28,3 +28,17 @@ Esc > Options > AddOns > ChunkHP, or `/chunkhp` (`/chunkhp options`, `/chunkhp p
 
 - Requirements, decisions and test status: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) and [docs/IMPLEMENTATION-MATRIX.md](docs/IMPLEMENTATION-MATRIX.md).
 - Release zips contain only the `ChunkHP` folder without `docs/` (see `.pkgmeta`).
+
+## Releasing
+
+Pushing a tag like `v1.5.1` runs [.github/workflows/release.yml](.github/workflows/release.yml), which uses the [BigWigs packager](https://github.com/BigWigsMods/packager) to build `ChunkHP-v1.5.1.zip`, write a changelog from the commits, and publish a GitHub release.
+
+1. Set `## Version` in `ChunkHP.toc` to the new version and commit.
+2. `git tag v1.5.1` and `git push origin v1.5.1`.
+
+To also upload to CurseForge (one-time setup):
+
+1. Create the CurseForge project, then add its id (from the "About Project" box) to `ChunkHP.toc` as `## X-Curse-Project-ID: <id>`.
+2. Create an API token at <https://legacy.curseforge.com/account/api-tokens> and add it to this repo under Settings > Secrets and variables > Actions as `CF_API_KEY`.
+
+Tags with `alpha` or `beta` in the name (e.g. `v1.6.0-beta1`) are uploaded as Alpha/Beta files.

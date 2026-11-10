@@ -1,0 +1,26 @@
+# Builds ChunkHP-<tag>.zip (per .pkgmeta) and publishes it whenever a version
+# tag like v1.5.1 is pushed: a GitHub release always, and CurseForge once the
+# TOC has "## X-Curse-Project-ID" and the CF_API_KEY secret is set.
+# Packager v2.6+ recognizes the Forever interface (16001).
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history for the changelog
+
+      - uses: BigWigsMods/packager@v2
