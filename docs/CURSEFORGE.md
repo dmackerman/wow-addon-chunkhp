@@ -9,7 +9,7 @@ Copy these into the CurseForge project form. Change anything you like.
 - **Main category:** Combat (secondary: Unit Frames)
 - **Summary (one line):** Damage chunks off health bars: the lost health flashes, then drains away like a fighting game or Soulslike.
 - **License:** your choice. "All Rights Reserved" keeps full control; MIT lets others reuse the code.
-- **Logo:** a square image (400×400 works well), for example a red health bar with a white chunk breaking off.
+- **Logo:** `media/logo-400.png` (400×400, made from `media/logo.svg`).
 
 ## Description
 

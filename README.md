@@ -1,5 +1,7 @@
 # ChunkHP
 
+<img src="media/logo.svg" alt="ChunkHP logo" width="160">
+
 A World of Warcraft: **Forever** addon that makes damage *feel* like damage. When your target or a nameplate takes a hit, the lost health flashes, then lingers as a "ghost" chunk that drains away: the delayed health bar from fighting games, Soulslikes and JRPGs, on WoW's own frames.
 
 ## Features
