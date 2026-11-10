@@ -1,0 +1,6 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<!-- Row in the ChunkHP options page; ChunkHPPreviewMixin builds the contents. -->
+	<Frame name="ChunkHPPreviewTemplate" mixin="ChunkHPPreviewMixin" virtual="true">
+		<Size x="280" y="150"/>
+	</Frame>
+</Ui>

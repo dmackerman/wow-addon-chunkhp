@@ -1,0 +1,11 @@
+## Interface: 16001
+## Title: ChunkHP
+## Notes: Damage on the target frame and nameplates flashes as a chunk that fades out, then drains away as a trail.
+## Author: Dave
+## Version: 1.5.0
+## SavedVariables: ChunkHPDB
+## Category: Combat
+
+Locales\Base.lua
+ChunkHP.lua
+ChunkHPPreview.xml
