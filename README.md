@@ -42,15 +42,3 @@ Open **Esc > Options > AddOns > ChunkHP**, or type `/chunkhp`.
 ## Made with AI
 
 Claude, an AI coding assistant, wrote most of ChunkHP's code under my direction, and I test it in game. If something breaks, please [open an issue](https://github.com/dmackerman/wow-addon-chunkhp/issues).
-
-## Development
-
-- Requirements, decisions and test status: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) and [docs/IMPLEMENTATION-MATRIX.md](docs/IMPLEMENTATION-MATRIX.md).
-- Release zips contain only the addon files (see `.pkgmeta`).
-
-### Releasing
-
-1. Set `## Version` in `ChunkHP.toc` and commit.
-2. `git tag v1.5.1` and `git push origin v1.5.1`.
-
-The [release workflow](.github/workflows/release.yml) builds the zip with the [BigWigs packager](https://github.com/BigWigsMods/packager), writes a changelog from the commits, and publishes it to GitHub and to CurseForge (project 1797146) as "ChunkHP v1.5.1". Tags containing `alpha` or `beta` are uploaded as Alpha or Beta files.
