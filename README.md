@@ -2,47 +2,56 @@
 
 <img src="media/logo.svg" alt="ChunkHP logo" width="160">
 
-**Download:** [ChunkHP on CurseForge](https://www.curseforge.com/wow/addons/chunkhp)
+**Make every hit land.** When your target loses health, the lost piece flashes, hangs there for a moment, then drains away, like the health bars in fighting games and Soulslikes. It works on WoW Forever's own target frame and nameplates.
 
-A World of Warcraft: **Forever** addon that makes damage *feel* like damage. When your target or a nameplate takes a hit, the lost health flashes, then lingers as a "ghost" chunk that drains away: the delayed health bar from fighting games, Soulslikes and JRPGs, on WoW's own frames.
+**[Download on CurseForge](https://www.curseforge.com/wow/addons/chunkhp)**
+
+<!-- Demo GIF: save it as media/demo.gif (about 600px wide, under 5 MB), then remove this comment. -->
+![ChunkHP in action](media/demo.gif)
 
 ## Features
 
-- Works on the **target frame** and **nameplates**.
-- **Flash** on the lost health, then a **draining trail** behind it.
-- **Styles:** Classic MMO, Soulslike, Fighting Game, JRPG, Arcade, or Custom.
-- **Live preview** in the options, drawn like a real nameplate in your Nameplate Style and Size.
-- **Damage Numbers** shortcuts for the game's floating combat text on targets.
-- Safe with Forever's secret health values: health only ever goes into `StatusBar:SetValue`, never into math.
+- **Hit flash.** The health that was just lost flashes white, so you see the size of every hit.
+- **Draining trail.** A gold "ghost" of the lost health stays for a moment, then drains down to the real value.
+- **Target frame and nameplates.** Turn each one on or off.
+- **Five styles.** Pick Classic MMO, Soulslike, Fighting Game, JRPG or Arcade, or tune the timing yourself.
+- **Live preview.** The options page shows a nameplate that looks like yours. Press Hit, Big hit or Heal, or turn on Auto, to see each change right away.
+- **Damage number shortcuts.** Turn floating damage, damage-over-time and healing numbers on or off, and change their size where your client allows it.
+- **No errors from secret health.** ChunkHP never reads or calculates health values, so Forever's protected health numbers can't break it.
 
 ## Install
 
-Install from [CurseForge](https://www.curseforge.com/wow/addons/chunkhp) with the CurseForge app, or manually: copy the `ChunkHP` folder into `World of Warcraft/_forever_/Interface/AddOns/`, then restart the game.
+Install it with the CurseForge app, or copy the `ChunkHP` folder into `World of Warcraft/_forever_/Interface/AddOns/` and restart the game.
 
-## Use
+## Settings
 
-Esc > Options > AddOns > ChunkHP, or `/chunkhp` (`/chunkhp options`, `/chunkhp preset fighting`, `/chunkhp delay 0.5`, …).
+Open **Esc > Options > AddOns > ChunkHP**, or type `/chunkhp`.
+
+| Command | What it does |
+| --- | --- |
+| `/chunkhp options` | Opens the settings page |
+| `/chunkhp preset fighting` | Switches style (`classic`, `soulslike`, `fighting`, `jrpg`, `arcade`) |
+| `/chunkhp delay 0.5` | Sets how long the trail waits before draining, in seconds |
+| `/chunkhp fade 0.3` | Sets how long the flash takes to fade, in seconds |
+| `/chunkhp target` · `nameplates` · `flash` · `trail` | Turns that part on or off |
 
 ## Compatibility
 
 - WoW Forever, interface 16001 (build 1.60.1).
-- Enemy nameplates inside instances are restricted by the game, so only the target frame shows the effect there.
+- In dungeons and raids, the game doesn't let addons change enemy nameplates, so only the target frame shows the effect there.
+
+## Made with AI
+
+Claude, an AI coding assistant, wrote most of ChunkHP's code under my direction, and I test it in game. If something breaks, please [open an issue](https://github.com/dmackerman/wow-addon-chunkhp/issues).
 
 ## Development
 
 - Requirements, decisions and test status: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) and [docs/IMPLEMENTATION-MATRIX.md](docs/IMPLEMENTATION-MATRIX.md).
-- Release zips contain only the `ChunkHP` folder without `docs/` (see `.pkgmeta`).
+- Release zips contain only the addon files (see `.pkgmeta`).
 
-## Releasing
+### Releasing
 
-Pushing a tag like `v1.5.1` runs [.github/workflows/release.yml](.github/workflows/release.yml), which uses the [BigWigs packager](https://github.com/BigWigsMods/packager) to build `ChunkHP-v1.5.1.zip`, write a changelog from the commits, and publish a GitHub release. On CurseForge the file is shown as "ChunkHP v1.5.1".
-
-1. Set `## Version` in `ChunkHP.toc` to the new version and commit.
+1. Set `## Version` in `ChunkHP.toc` and commit.
 2. `git tag v1.5.1` and `git push origin v1.5.1`.
 
-To also upload to CurseForge (one-time setup):
-
-1. Done: the project is [chunkhp](https://www.curseforge.com/wow/addons/chunkhp) and `ChunkHP.toc` has `## X-Curse-Project-ID: 1797146`.
-2. Create an API token at <https://legacy.curseforge.com/account/api-tokens> and add it to this repo under Settings > Secrets and variables > Actions as `CF_API_KEY`.
-
-Tags with `alpha` or `beta` in the name (e.g. `v1.6.0-beta1`) are uploaded as Alpha/Beta files.
+The [release workflow](.github/workflows/release.yml) builds the zip with the [BigWigs packager](https://github.com/BigWigsMods/packager), writes a changelog from the commits, and publishes it to GitHub and to CurseForge (project 1797146) as "ChunkHP v1.5.1". Tags containing `alpha` or `beta` are uploaded as Alpha or Beta files.
