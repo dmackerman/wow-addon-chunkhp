@@ -35,7 +35,7 @@ Esc > Options > AddOns > ChunkHP, or `/chunkhp` (`/chunkhp options`, `/chunkhp p
 
 ## Releasing
 
-Pushing a tag like `v1.5.1` runs [.github/workflows/release.yml](.github/workflows/release.yml), which uses the [BigWigs packager](https://github.com/BigWigsMods/packager) to build `ChunkHP-v1.5.1.zip`, write a changelog from the commits, and publish a GitHub release.
+Pushing a tag like `v1.5.1` runs [.github/workflows/release.yml](.github/workflows/release.yml), which uses the [BigWigs packager](https://github.com/BigWigsMods/packager) to build `ChunkHP-v1.5.1.zip`, write a changelog from the commits, and publish a GitHub release. On CurseForge the file is shown as "ChunkHP v1.5.1".
 
 1. Set `## Version` in `ChunkHP.toc` to the new version and commit.
 2. `git tag v1.5.1` and `git push origin v1.5.1`.

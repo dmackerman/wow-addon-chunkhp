@@ -24,3 +24,6 @@ jobs:
           fetch-depth: 0 # full history for the changelog
 
       - uses: BigWigsMods/packager@v2
+        with:
+          # "<zip name>:<CurseForge display name>", e.g. "ChunkHP v1.5.1"
+          args: -n "{package-name}-{project-version}{classic}:ChunkHP {project-version}"
