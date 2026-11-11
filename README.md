@@ -6,7 +6,6 @@
 
 **[Download on CurseForge](https://www.curseforge.com/wow/addons/chunkhp)**
 
-<!-- Demo GIF: save it as media/demo.gif (about 600px wide, under 5 MB), then remove this comment. -->
 ![ChunkHP in action](media/demo.gif)
 
 ## Features
